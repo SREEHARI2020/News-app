@@ -1,9 +1,19 @@
-//f0cc6e9dae1f44c9973c729d9bf07c1c
-import './App.css';
 
+import React from 'react';
+import './App.css';
+import {News} from './NewsContext'
+const NewsContext=React.createContext()
 function App() {
+  
   return (
     <div className="App">
+      <News>
+      
+    Data fetched
+
+
+
+      </News>
       
     </div>
   );
