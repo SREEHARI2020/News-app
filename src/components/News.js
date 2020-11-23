@@ -10,7 +10,7 @@ export const News = () => {
 
   return (
     <div>
-      <h1 className="head__text">News App</h1>
+     <header> <navbar><h1 className="head__text">World today </h1></navbar></header>
       <div className="all__news">
         {data
           ? data.articles.map((news) => (

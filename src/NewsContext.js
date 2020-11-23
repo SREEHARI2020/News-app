@@ -5,15 +5,17 @@ import {News} from './components/News'
 export const NewsContext = createContext();
 
 export const NewsContextProvider= (props) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
 
 
   useEffect(() => {
+
+    console.log("console");
     axios
       .get(
         `http://newsapi.org/v2/everything?q=bitcoin&from=2020-10-23&sortBy=publishedAt&apiKey=f0cc6e9dae1f44c9973c729d9bf07c1c`
       )
-      .then((response) =>console.log(response.data))
+      .then((response) =>setData(response.data))
       .catch((error) => console.log(error));
       
   }, []);
