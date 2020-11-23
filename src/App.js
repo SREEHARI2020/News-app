@@ -1,21 +1,15 @@
-
-import React from 'react';
-import './App.css';
-import {News} from './NewsContext'
-const NewsContext=React.createContext()
-function App() {
   
+import React, { createContext, useEffect, useState } from "react";
+import axios from "axios";
+import { NewsContextProvider } from "./NewsContext";
+import {News} from "./components/News";
+import "./App.css";
+
+function App() {
   return (
-    <div className="App">
-      <News>
-      
-    Data fetched
-
-
-
-      </News>
-      
-    </div>
+    
+      <News />
+   
   );
 }
 
